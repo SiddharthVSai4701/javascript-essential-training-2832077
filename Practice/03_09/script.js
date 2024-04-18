@@ -16,6 +16,18 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  changeName: function(newName){
+    this.name = newName;
+  },
+  changeVolume: function(newVolume) {
+    this.volume = newVolume;
+  },
+  changeColor: function(newColor) {
+    this.color = newColor;
+  },
+  changePocketNum: function(newPocketNum) {
+    this.pocketNum = newPocketNum;
+  },
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -24,3 +36,8 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+
+
+console.log("BEFORE NAME CHANGE:", backpack.name);
+backpack.changeName("Sid's backpack");
+console.log("AFTER NAME CHANGE:", backpack.name);
